@@ -3,103 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mycux - About Us</title>
-    <!-- Load Tailwind CSS -->
+    <title>On-Demand Expertise | Your Pop Jobs Specialist</title>
+    <!-- Load Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for the Inter font and color scheme -->
+    <!-- Use Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        /* Custom Styles and Color Scheme */
         :root {
+            --color-primary: #4f46e5; /* Indigo 600 */
+            --color-secondary: #e0e7ff; /* Indigo 100 for lighter accents */
+            --color-dark: #1f2937; /* Gray 800 for background */
+            --color-text: #f9fafb; /* White/Off-white for text */
+        }
+        body {
             font-family: 'Inter', sans-serif;
+            background-color: var(--color-dark);
+            color: var(--color-text);
+            scroll-behavior: smooth;
+        }
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca; /* Indigo 700 */
+        }
+        .placeholder {
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-dark);
+            border: 2px dashed #4f46e5; /* Primary color border */
+            border-radius: 0.75rem;
+            color: #9ca3af; /* Gray text for placeholder */
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem;
         }
     </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="p-4 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold" style="color: var(--color-primary);">GIG-PRO</a>
+            <nav class="space-x-4 text-sm font-medium hidden sm:block">
+                <a href="#services" class="hover:text-indigo-400 transition duration-150">Services</a>
+                <a href="#portfolio" class="hover:text-indigo-400 transition duration-150">Projects</a>
+                <a href="#contact" class="px-3 py-1 rounded-lg btn-primary hover:bg-indigo-700">Get a Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- 1. Hero Section -->
+        <section id="hero" class="py-20 md:py-32 text-center bg-gray-900">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                    Your <span style="color: var(--color-primary);">On-Demand Expertise</span> for Specialized Gigs
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Need fast, professional help without the long-term contract? I deliver quality results for your critical "pop jobs" in development, design, and data.
+                </p>
+                <a href="#contact" class="px-8 py-3 rounded-xl font-semibold text-lg btn-primary shadow-lg">
+                    Start Your Project Now
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Services Section (The "Pop Jobs" Offering) -->
+        <section id="services" class="py-20 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--color-primary);">Specialized Pop Jobs I Handle</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Service Card 1: Front-End Fixes -->
+                    <div class="p-6 rounded-xl bg-gray-900 shadow-xl border-t-4 border-indigo-500">
+                        <div class="text-4xl mb-4" style="color: var(--color-primary);">🛠️</div>
+                        <h3 class="text-2xl font-semibold mb-3">Code Debugging & Fixes</h3>
+                        <p class="text-gray-400">
+                            Quick turn-around on small web bugs, responsive design issues, or script adjustments. Deploy fast fixes when time is critical.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 2: Micro-Design Tasks -->
+                    <div class="p-6 rounded-xl bg-gray-900 shadow-xl border-t-4 border-indigo-500">
+                        <div class="text-4xl mb-4" style="color: var(--color-primary);">🎨</div>
+                        <h3 class="text-2xl font-semibold mb-3">Graphic & Asset Creation</h3>
+                        <p class="text-gray-400">
+                            Logo refinement, quick banner design, social media asset sizing, or creating simple website icons/SVGs.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 3: Data Entry & Cleanup -->
+                    <div class="p-6 rounded-xl bg-gray-900 shadow-xl border-t-4 border-indigo-500">
+                        <div class="text-4xl mb-4" style="color: var(--color-primary);">📊</div>
+                        <h3 class="text-2xl font-semibold mb-3">Data Organization & Import</h3>
+                        <p class="text-gray-400">
+                            Excel/CSV cleaning, CRM data imports, or light scripting to automate repetitive data tasks. Get your spreadsheets sorted, fast.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Portfolio / Image Gallery Section -->
+        <section id="portfolio" class="py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4" style="color: var(--color-primary);">Project Showcase</h2>
+                <p class="text-center text-xl text-gray-400 mb-12">Examples of recent successful pop jobs and micro-projects.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Image Placeholder 1 -->
+                    <figure class="rounded-xl overflow-hidden shadow-2xl">
+                        <!-- REPLACE THIS DIV WITH YOUR <img> TAG -->
+                        <!-- NOTE: Use this as your image's alt text: "Completed landing page design for a fintech client." -->
+                        <div class="placeholder">
+                            Placeholder for Image 1<br>(Alt Text: Completed landing page design for a fintech client.)
+                        </div>
+                        <figcaption class="p-3 text-center text-sm bg-gray-900 text-gray-300">
+                            Landing Page Design Refinement
+                        </figcaption>
+                    </figure>
+                    
+                    <!-- Image Placeholder 2 -->
+                    <figure class="rounded-xl overflow-hidden shadow-2xl">
+                        <!-- REPLACE THIS DIV WITH YOUR <img> TAG -->
+                        <!-- NOTE: Use this as your image's alt text: "A custom SQL query script for automated data reporting." -->
+                        <div class="placeholder">
+                            Placeholder for Image 2<br>(Alt Text: A custom SQL query script for automated data reporting.)
+                        </div>
+                        <figcaption class="p-3 text-center text-sm bg-gray-900 text-gray-300">
+                            Data Automation Scripting
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image Placeholder 3 -->
+                    <figure class="rounded-xl overflow-hidden shadow-2xl">
+                        <!-- REPLACE THIS DIV WITH YOUR <img> TAG -->
+                        <!-- NOTE: Use this as your image's alt text: "Mobile view screenshot of a fixed e-commerce checkout bug." -->
+                        <div class="placeholder">
+                            Placeholder for Image 3<br>(Alt Text: Mobile view screenshot of a fixed e-commerce checkout bug.)
+                        </div>
+                        <figcaption class="p-3 text-center text-sm bg-gray-900 text-gray-300">
+                            Mobile Checkout Bug Fix
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image Placeholder 4 -->
+                    <figure class="rounded-xl overflow-hidden shadow-2xl">
+                        <!-- REPLACE THIS DIV WITH YOUR <img> TAG -->
+                        <!-- NOTE: Use this as your image's alt text: "High-resolution banner design for a marketing campaign." -->
+                        <div class="placeholder">
+                            Placeholder for Image 4<br>(Alt Text: High-resolution banner design for a marketing campaign.)
+                        </div>
+                        <figcaption class="p-3 text-center text-sm bg-gray-900 text-gray-300">
+                            Marketing Banner Creation
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--color-primary);">Ready to Get That Job Done?</h2>
+                <p class="text-xl text-gray-400 mb-8">
+                    Send a brief description of your task, budget, and deadline. I'll get back to you within 2 business hours with an estimated quote.
+                </p>
+                
+                <form onsubmit="event.preventDefault(); showMessage('Thank you! Your request has been received.', 'success')">
+                    <div class="space-y-4 max-w-lg mx-auto">
+                        <input type="text" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white">
+                        <input type="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white">
+                        <textarea placeholder="Tell me about your pop job (Task, Budget, Deadline)" rows="4" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white"></textarea>
+                        <button type="submit" class="w-full py-3 rounded-lg font-semibold btn-primary text-lg">
+                            Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+         <!-- Message Box Modal -->
+        <div id="message-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 transition-opacity duration-300" aria-modal="true" role="dialog">
+            <div class="bg-gray-800 p-8 rounded-xl max-w-sm w-full transform transition-all duration-300 scale-95 shadow-2xl">
+                <h3 id="modal-title" class="text-xl font-bold mb-4" style="color: var(--color-primary);">Notification</h3>
+                <p id="modal-message" class="text-gray-300 mb-6"></p>
+                <button onclick="closeModal()" class="w-full py-2 rounded-lg font-semibold btn-primary">
+                    Acknowledge
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center border-t border-gray-700 bg-gray-900">
+        <p class="text-sm text-gray-500">&copy; <span id="current-year"></span> GIG-PRO. On-Demand Digital Services.</p>
+    </footer>
+
+    <!-- JavaScript for Modal/Utility -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#3b82f6', // Indigo Blue
-                        'secondary': '#1f2937', // Dark Gray/Slate
-                        'accent': '#fbbf24', // Amber/Yellow
-                    }
-                }
-            }
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Modal/Message Box Functions
+        function showMessage(message, type) {
+            const modal = document.getElementById('message-modal');
+            const title = document.getElementById('modal-title');
+            const msg = document.getElementById('modal-message');
+            
+            msg.textContent = message;
+            title.textContent = type === 'success' ? 'Request Sent' : 'Error';
+            title.style.color = type === 'success' ? 'var(--color-primary)' : '#EF4444'; // Red for error
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('message-modal');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                 modal.classList.add('hidden');
+            }, 300);
+           
         }
     </script>
-</head>
-
-<body class="bg-gray-50 min-h-screen">
-
-    <!-- Navbar with Home Link -->
-    <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
-            <!-- Logo (Links to index.html) -->
-            <a href="index.html" class="flex items-center space-x-2 text-2xl font-extrabold text-primary tracking-tight rounded-lg p-1 transition duration-150 ease-in-out hover:text-blue-700">
-                <!-- Simple Logo SVG -->
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                <span>Mycux</span>
-            </a>
-            
-            <!-- Home Button -->
-            <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-primary transition duration-150 ease-in-out px-3 py-2 rounded-lg border border-transparent hover:border-gray-200">
-                Home
-            </a>
-        </div>
-    </nav>
-
-    <!-- Main Content Area: About Mycux -->
-    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-                The Mycux Promise: Privacy Meets Community
-            </h1>
-            <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-                Mycux is built on a foundation of cryptographic anonymity, ensuring that your identity remains private while you contribute to the community.
-            </p>
-        </header>
-
-        <!-- Feature Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            <!-- Feature 1: Anonymity-First Signup -->
-            <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-primary transform hover:scale-[1.01] transition duration-300">
-                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary mb-4">
-                    <!-- Lock Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6-6h6m6 0h-6m-6-6h6m6 0h-6m-4 12h14a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                </div>
-                <h2 class="text-xl font-bold text-gray-900 mb-3">Anonymity-First Signup</h2>
-                <p class="text-gray-600">
-                    When you sign up, your personal details (like name and email) are **immediately hashed** using a secure, one-way cryptographic function.
-                    We never store the original data. Instead, only your unique, anonymous, hashed ID is retained, making sure your **Personally Identifiable Information (PII) never touches our database** in its readable form.
-                </p>
-            </div>
-
-            <!-- Feature 2: Secure Login Simulation -->
-            <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-accent transform hover:scale-[1.01] transition duration-300">
-                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-accent/10 text-accent mb-4">
-                    <!-- Key Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2v10a2 2 0 01-2 2H9a2 2 0 01-2-2V9a2 2 0 012-2h6zm0 0V5a2 2 0 00-2-2H9a2 2 0 00-2 2v2m8 0h-6"></path></svg>
-                </div>
-                <h2 class="text-xl font-bold text-gray-900 mb-3">Login Simulation</h2>
-                <p class="text-gray-600">
-                    Logging in is a **simulation** of identity verification. You provide your credentials, we re-hash them on the fly, and compare the *new* hash against the stored anonymous ID. If they match, you're granted access. This proves your identity without ever exposing or storing your original sensitive login information.
-                </p>
-            </div>
-
-            <!-- Feature 3: Empowered Review Submission -->
-            <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-secondary transform hover:scale-[1.01] transition duration-300">
-                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-secondary/10 text-secondary mb-4">
-                    <!-- Chat Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.565C5.352 15.602 7.009 15 9 15h3.992c4.97 0 9-3.582 9-8s-4.03-8-9-8-9 3.582-9 8h.01"></path></svg>
-                </div>
-                <h2 class="text-xl font-bold text-gray-900 mb-3">Review Submission</h2>
-                <p class="text-gray-600">
-                    Once logged in, users gain the ability to **submit honest product reviews**. Because your identity is cryptographically shielded, you can trust that your opinions are tied only to your anonymous ID, allowing for genuine, unbiased community input.
-                </p>
-            </div>
-
-        </div>
-    </main>
 
 </body>
 </html>
