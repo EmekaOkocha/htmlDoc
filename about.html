@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Aura Dynamics: Creative Digital Solutions</title>
+    <!-- Load Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles and Color Scheme (Professional & Attractive: Deep Navy/Vibrant Orange) */
+        :root {
+            --color-primary: #F97316; /* Orange 600 - Primary Accent */
+            --color-secondary: #3B82F6; /* Blue 500 - Secondary Blue for contrast */
+            --color-dark: #0B1229; /* Deep Navy/Midnight Blue for dark background */
+            --color-text: #E5E7EB; /* Gray 200 for light text */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-dark);
+            color: var(--color-text);
+            scroll-behavior: smooth;
+        }
+        .header-bg {
+            background-color: var(--color-dark);
+        }
+        .text-primary { color: var(--color-primary); }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-secondary { color: var(--color-secondary); }
+
+        .btn-main {
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+            transition: background-color 0.3s;
+        }
+        .btn-main:hover {
+            background-color: #C2410C; /* Orange 700 - Darker orange hover */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="p-4 border-b border-gray-800 sticky top-0 z-10 header-bg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-primary">Aura Dynamics</a>
+            <nav class="space-x-6 text-sm font-medium hidden sm:block">
+                <a href="#mission" class="hover:text-primary transition duration-150">Our Mission</a>
+                <a href="#values" class="hover:text-primary transition duration-150">Values</a>
+                <a href="#contact" class="px-4 py-2 rounded-lg font-semibold btn-main hover:bg-orange-700">Get in Touch</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Hero/Introduction Section -->
+        <section class="py-24 md:py-32 bg-gray-900 border-b border-gray-800">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight text-primary">
+                    We Create Impact, Not Just Campaigns.
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Aura Dynamics is where digital strategy meets creative excellence. Founded in 2020, we empower visionary brands to connect with their audience through data-driven campaigns and transformative design.
+                </p>
+                <a href="#mission" class="px-8 py-3 rounded-xl font-semibold text-lg btn-main shadow-xl">
+                    Discover Our Story
+                </a>
+            </div>
+        </section>
+
+        <!-- Our Mission Section -->
+        <section id="mission" class="py-20 bg-slate-800/50">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4 text-secondary">Our Mission</h2>
+                    <p class="text-gray-400 text-lg mb-6">
+                        Our primary goal is simple: to be the catalyst for our clients' digital growth. We exist to simplify the complex world of digital marketing, providing transparent, scalable, and innovative solutions that deliver tangible ROI. We believe that true success is built on mutual trust and shared objectives.
+                    </p>
+                    <p class="text-gray-400 text-lg">
+                        We don't chase trends; we set strategies that stand the test of time, ensuring your brand maintains its unique voice while adapting to the rapidly evolving digital landscape.
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-gray-800 shadow-2xl">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">The Aura Edge</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-secondary mr-3">&#10003;</span> 
+                            <span>**Integrated Approach:** Combining creative content, technical SEO, and predictive analytics.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-secondary mr-3">&#10003;</span>
+                            <span>**Client-Centricity:** Dedicated pods ensuring personalized, high-touch support.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-secondary mr-3">&#10003;</span>
+                            <span>**Future-Focused:** Investing heavily in AI tools to maximize campaign efficiency.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section id="values" class="py-20 bg-gray-900 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-12 text-primary">The Values That Guide Our Work</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Value 1: Transparency -->
+                    <div class="p-8 rounded-xl bg-gray-800 shadow-lg border-t-4 border-primary">
+                        <div class="text-5xl mb-4 text-secondary">💡</div>
+                        <h3 class="text-xl font-semibold mb-3 text-white">Radical Transparency</h3>
+                        <p class="text-gray-400 text-sm">
+                            We share everything—from budgets and performance metrics to process flaws. Our clients deserve clarity and trust at every stage of engagement.
+                        </p>
+                    </div>
+
+                    <!-- Value 2: Innovation -->
+                    <div class="p-8 rounded-xl bg-gray-800 shadow-lg border-t-4 border-primary">
+                        <div class="text-5xl mb-4 text-secondary">⚡</div>
+                        <h3 class="text-xl font-semibold mb-3 text-white">Relentless Innovation</h3>
+                        <p class="text-gray-400 text-sm">
+                            The digital world never stands still. We are constantly experimenting with new platforms, algorithms, and technologies to keep our clients ahead of the curve.
+                        </p>
+                    </div>
+
+                    <!-- Value 3: Ownership -->
+                    <div class="p-8 rounded-xl bg-gray-800 shadow-lg border-t-4 border-primary">
+                        <div class="text-5xl mb-4 text-secondary">🤝</div>
+                        <h3 class="text-xl font-semibold mb-3 text-white">Full Ownership</h3>
+                        <p class="text-gray-400 text-sm">
+                            We treat your goals as our own. Accountability is central to our culture, meaning we are fully invested in the success and outcome of every project we take on.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact CTA -->
+        <section id="contact" class="py-16 bg-gray-900 text-center">
+            <div class="max-w-5xl mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-4 text-primary">Ready to Ignite Your Brand's Digital Aura?</h2>
+                <p class="text-lg text-gray-400 mb-8">
+                    Let's discuss how our dynamic approach can translate into exceptional results for your business.
+                </p>
+                <a href="#" class="px-8 py-3 rounded-xl font-semibold text-lg btn-main shadow-xl">
+                    Start a Conversation Today
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center border-t border-gray-800 header-bg">
+        <p class="text-sm text-gray-500">&copy; <span id="current-year">2025</span> Aura Dynamics. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
