@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Okoch Evolution Technology - Evolving with the time</title>
+    <title>Okoch Evolution Technology - Gate Automation</title>
     <!-- Load Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Use Inter font -->
@@ -37,6 +37,14 @@
             transform: translateY(-5px);
             border-color: var(--color-primary);
         }
+        /* Custom styling for the quote box to match the dark theme */
+        .quote-box {
+            background-color: var(--color-accent);
+            border: 2px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -58,12 +66,6 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-
-        <!-- Mobile Menu Button (Hamburger Icon) -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
         
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="md:hidden hidden bg-slate-900 border-t border-slate-700/50">
@@ -75,33 +77,142 @@
             </nav>
         </div>
     </header>
-    <h1>🛠️ Gate Works and Automation</h1>
-    
-    <h2>Gate Types and Structures</h2>
-    <p>With collaborations from manufacturing company  and also a leading automation giant like Century we fabricate, and automate a wide variety of custom gates of various sizesand structures:</p>
-    <ul>
-        <li>Swing Gates</li>
-        <li>Sliding Gates</li>
-        <li>Sectional Gates</li>
-        <li>Pedestrian Gates</li>
-    </ul>
 
-    <h2>Automation System</h2>
-    <p>We exclusively use and install reliable automation systems from the trusted brand **Centurion**.</p>
+    <main class="pt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            
+            <!-- Main Title Section -->
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 section-title">
+                    🛠️ Gate Works and Automation
+                </h1>
+                <p class="text-xl text-gray-400">
+                    Secure and smart access solutions for residential and commercial properties.
+                </p>
+            </header>
 
-    <h2>Quotation and Inclusions</h2>
-    <p>A comprehensive quote (provided within 1 hour of receiving information) covers the cost of **all materials** (if fabrication is required), the **Centurion automation kit**, and the **professional installation**.</p>
+            <!-- Gate Types and Structures Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 section-title">Gate Types and Structures</h2>
+                <p class="text-lg text-gray-300 mb-6">
+                    With collaborations from a manufacturing company and a leading automation giant like Centurion, we fabricate and automate a wide variety of custom gates of various sizes and structures:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-lg text-gray-300 pl-4">
+                    <li>Swing Gates </li>
+                    <li>Sliding Gates </li>
+                    <li>Sectional Gates </li>
+                    <li>Pedestrian Gates </li>
+                </ul>
+            </section>
 
-    <div class="quote-box">
-        <h3>➡️ Information Required for Quote</h3>
-        <p>Please provide the following details so we can generate an accurate quotation:</p>
-        <ul>
-            <li>The **Desired Gate Type** (e.g., Sliding, Swing, sectional).</li>
-            <li>The **Current Gate Type** (if you are automating an existing gate or converting an existing gate to another type.).</li>
-            <li>**Current Gate picture** (for assessment purposes).</li>
-            <li>**Gate Location** (where work will be carried our or for site assessment purposes).</li>
-            <li>A **Reference Picture** of the desired gate design (if available).</li>
-        </ul>
-    </div>
+            <!-- Automation System Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 section-title">Automation System</h2>
+                <p class="text-lg text-gray-300">
+                    We exclusively use and install reliable automation systems from the trusted brand **Centurion**.
+                </p>
+            </section>
+
+            <!-- Quotation and Inclusions Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-4 section-title">Quotation and Inclusions</h2>
+                <p class="text-lg text-gray-300">
+                    A comprehensive quote (provided within 1 hour of receiving information) covers the cost of **all materials** (if fabrication is required), the **Centurion automation kit**, and the **professional installation**.
+                </p>
+            </section>
+
+            <!-- Required Information for Quote (CTA Box) -->
+            <div class="quote-box">
+                <h3 class="text-2xl font-bold mb-4" style="color: var(--color-primary);">
+                    ➡️ Information Required for Quote
+                </h3>
+                <p class="text-gray-300 mb-6">
+                    Please provide the following details so we can generate an accurate quotation:
+                </p>
+                <ul class="list-disc list-inside space-y-3 text-gray-200 pl-4">
+                    <li>The <strong class="text-primary">Desired Gate Type</strong> (e.g., Sliding, Swing, sectional).</li>
+                    <li>The <strong class="text-primary">Current Gate Type</strong> (if you are automating an existing gate or converting an existing gate to another type).</li>
+                    <li><strong class="text-primary">Current Gate picture</strong> (for assessment purposes).</li>
+                    <li><strong class="text-primary">Gate Location</strong> (where work will be carried out or for site assessment purposes).</li>
+                    <li>A <strong class="text-primary">Reference Picture</strong> of the desired gate design (if available).</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- Message Box Modal (Included for completeness/utility) -->
+        <div id="message-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300" aria-modal="true" role="dialog">
+            <div class="bg-slate-800 p-8 rounded-xl max-w-sm w-full transform transition-all duration-300 scale-95">
+                <h3 id="modal-title" class="text-xl font-bold mb-4" style="color: var(--color-primary);">Notification</h3>
+                <p id="modal-message" class="text-gray-300 mb-6"></p>
+                <button onclick="closeModal()" class="w-full py-2 rounded-lg font-semibold" style="background-color: var(--color-primary); color: var(--color-bg);">
+                    Close
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p class="mb-4">&copy; <span id="current-year"></span> Okoch Evolution Technology. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="about.html" class="hover:text-teal-400">Privacy Policy</a>
+                <span class="text-slate-700">|</span>
+                <a href="affiliates.html" class="hover:text-teal-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Utility -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Modal/Message Box Functions (for consistency)
+        function showMessage(message, type) {
+            const modal = document.getElementById('message-modal');
+            const title = document.getElementById('modal-title');
+            const msg = document.getElementById('modal-message');
+            
+            msg.textContent = message;
+            title.textContent = type === 'success' ? 'Success' : 'Error';
+            title.style.color = type === 'success' ? 'var(--color-primary)' : '#EF4444'; 
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('message-modal');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                 modal.classList.add('hidden');
+            }, 300);
+            
+        }
+
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').includes('.html')) return; 
+
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
