@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Okoch Evolution Technology - Evolving with the time</title>
+    <title>Okoch Evolution Technology - About Us</title>
     <!-- Load Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Use Inter font -->
@@ -29,19 +29,27 @@
         .section-title {
             color: var(--color-primary);
         }
-        .affiliate-card {
-             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-             transition: transform 0.3s ease;
+        .vision-card {
+            background-color: var(--color-accent);
+            border: 1px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            transition: transform 0.3s ease;
         }
-        .affiliate-card:hover {
+        .vision-card:hover {
             transform: translateY(-5px);
-            border-color: var(--color-primary);
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 136, 0.3), 0 4px 6px -4px rgba(0, 163, 136, 0.1);
+        }
+        .team-member-photo {
+            object-fit: cover;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--color-primary);
         }
     </style>
 </head>
 <body class="antialiased">
-
-    <!-- Header and Navigation -->
     <header id="header" class="fixed top-0 left-0 w-full z-50 header-sticky">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo -->
@@ -50,7 +58,7 @@
             <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="index.html" class="hover:text-teal-400 transition duration-150">Home</a>
-                <a href="about.html" class="hover:text-teal-400 transition duration-150">About Us</a>
+                <a href="about.html" class="text-white transition duration-150 border-b-2 border-primary">About Us</a>
                 <a href="affiliates.html" class="hover:text-teal-400 transition duration-150">Affiliates</a>
                 <a href="contact.html" class="hover:text-teal-400 transition duration-150">Contact</a>
             </nav>
@@ -60,23 +68,183 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-
-        <!-- Mobile Menu Button (Hamburger Icon) -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
         
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="md:hidden hidden bg-slate-900 border-t border-slate-700/50">
             <nav class="flex flex-col px-4 py-2 space-y-2 text-sm font-medium">
                 <a href="index.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
-                <a href="about.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Us</a>
+                <a href="about.html" class="block py-2 bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Us</a>
                 <a href="affiliates.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Affiliates</a>
                 <a href="contact.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
             </nav>
         </div>
     </header>
 
-   </body>
+    <main class="pt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            
+            <!-- Main Title Section -->
+            <header class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 section-title">
+                    Who We Are
+                </h1>
+                <p class="text-xl text-gray-400">
+                    Driving innovation and reliability in technology and building services.
+                </p>
+            </header>
+
+            <!-- Mission & Vision Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 section-title text-center">Our Core Purpose</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Mission Card -->
+                    <div class="vision-card">
+                        <h3 class="text-2xl font-bold mb-3" style="color: var(--color-primary);">🚀 Mission</h3>
+                        <p class="text-gray-300">
+                            To empower homes and businesses across Nigeria with cutting-edge technological solutions and superior construction services, delivered with integrity and commitment to excellence.
+                        </p>
+                    </div>
+                    <!-- Vision Card -->
+                    <div class="vision-card">
+                        <h3 class="text-2xl font-bold mb-3" style="color: var(--color-primary);">💡 Vision</h3>
+                        <p class="text-gray-300">
+                            To be the leading and most trusted provider of specialized technology and building solutions in West Africa, recognized for quality workmanship and customer satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Company Values Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 section-title text-center">Our Values</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-lg">
+                        <span class="text-4xl" style="color: var(--color-primary);">🛠️</span>
+                        <h4 class="text-lg font-semibold mt-2 text-gray-100">Quality Workmanship</h4>
+                        <p class="text-sm text-gray-400">We guarantee high standards in every project, from installation to finish.</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-lg">
+                        <span class="text-4xl" style="color: var(--color-primary);">🤝</span>
+                        <h4 class="text-lg font-semibold mt-2 text-gray-100">Customer Focus</h4>
+                        <p class="text-sm text-gray-400">Our success is measured by the satisfaction and trust of our clients.</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-lg">
+                        <span class="text-4xl" style="color: var(--color-primary);">✨</span>
+                        <h4 class="text-lg font-semibold mt-2 text-gray-100">Innovation</h4>
+                        <p class="text-sm text-gray-400">Continuously adopting the best and latest technologies and design practices.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-6 section-title">Our Story</h2>
+                <p class="text-lg text-gray-300 mb-4">
+                    Founded with a clear vision to bridge the gap between quality technology services and reliable interior/exterior solutions, Okoch Evolution Technology has grown into a versatile firm. We started small, focusing initially on specialized services like car tracking and POP ceiling installations.
+                </p>
+                <p class="text-lg text-gray-300">
+                    Over the years, we have expanded our portfolio, always maintaining a commitment to transparency, timely execution, and the use of premium materials. Our evolution is driven by the needs of our community and the pursuit of technological integration in everyday life.
+                </p>
+            </section>
+
+            <!-- Team Section (Placeholder) -->
+            <section class="mb-16 text-center">
+                <h2 class="text-3xl font-bold mb-10 section-title">Meet Our Leadership</h2>
+                <div class="flex flex-wrap justify-center gap-10">
+                    
+                    <!-- Team Member Placeholder 1 -->
+                    <div class="flex flex-col items-center max-w-xs">
+                        <img src="https://placehold.co/120x120/1E293B/E2E8F0?text=JD" alt="Team Leader 1" class="team-member-photo mb-3">
+                        <h4 class="text-xl font-semibold text-gray-100">John Doe</h4>
+                        <p class="text-md text-primary">Chief Executive Officer</p>
+                        <p class="text-sm text-gray-400 mt-2">15+ years experience in project management and technological deployment.</p>
+                    </div>
+                    
+                    <!-- Team Member Placeholder 2 -->
+                    <div class="flex flex-col items-center max-w-xs">
+                        <img src="https://placehold.co/120x120/1E293B/E2E8F0?text=AJ" alt="Team Leader 2" class="team-member-photo mb-3">
+                        <h4 class="text-xl font-semibold text-gray-100">Aisha Jibril</h4>
+                        <p class="text-md text-primary">Head of Operations</p>
+                        <p class="text-sm text-gray-400 mt-2">Expert in logistics, quality control, and client relationship management.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Message Box Modal (Included for completeness/utility) -->
+        <div id="message-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300" aria-modal="true" role="dialog">
+            <div class="bg-slate-800 p-8 rounded-xl max-w-sm w-full transform transition-all duration-300 scale-95">
+                <h3 id="modal-title" class="text-xl font-bold mb-4" style="color: var(--color-primary);">Notification</h3>
+                <p id="modal-message" class="text-gray-300 mb-6"></p>
+                <button onclick="closeModal()" class="w-full py-2 rounded-lg font-semibold" style="background-color: var(--color-primary); color: var(--color-bg);">
+                    Close
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p class="mb-4">&copy; <span id="current-year"></span> Okoch Evolution Technology. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="about.html" class="hover:text-teal-400">Privacy Policy</a>
+                <span class="text-slate-700">|</span>
+                <a href="affiliates.html" class="hover:text-teal-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Utility -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Modal/Message Box Functions (for consistency)
+        function showMessage(message, type) {
+            const modal = document.getElementById('message-modal');
+            const title = document.getElementById('modal-title');
+            const msg = document.getElementById('modal-message');
+            
+            msg.textContent = message;
+            title.textContent = type === 'success' ? 'Success' : 'Error';
+            title.style.color = type === 'success' ? 'var(--color-primary)' : '#EF4444'; 
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('message-modal');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                 modal.classList.add('hidden');
+            }, 300);
+            
+        }
+
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').includes('.html')) return; 
+
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
