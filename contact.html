@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Okoch Evolution Technology - Evolving with the time</title>
+    <title>Okoch Evolution Technology - Contact</title>
     <!-- Load Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Use Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles and professional color scheme */
+        /* Custom styles and professional color scheme (Copied from Canvas) */
         :root {
             --color-bg: #0F172A; /* Slate 900 */
             --color-primary: #00A388; /* Deep Teal/Cyan */
@@ -29,39 +29,50 @@
         .section-title {
             color: var(--color-primary);
         }
-        .affiliate-card {
-             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-             transition: transform 0.3s ease;
+        .contact-form {
+            background-color: var(--color-accent);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
-        .affiliate-card:hover {
-            transform: translateY(-5px);
+        .info-card {
+            background-color: var(--color-accent);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            background-color: #1E293B; /* Slate 800 */
+            border: 1px solid #475569; /* Slate 600 */
+            color: var(--color-text);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            transition: border-color 0.2s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
             border-color: var(--color-primary);
         }
     </style>
 </head>
 <body class="antialiased">
-
-    <!-- Header and Navigation -->
     <header id="header" class="fixed top-0 left-0 w-full z-50 header-sticky">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo -->
-            <a href="#home" class="text-2xl font-bold tracking-tight" style="color: var(--color-primary);">Okoch Evolution Technology</a>
+            <a href="index.html" class="text-2xl font-bold tracking-tight" style="color: var(--color-primary);">Okoch Evolution Technology</a>
             
             <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="index.html" class="hover:text-teal-400 transition duration-150">Home</a>
                 <a href="about.html" class="hover:text-teal-400 transition duration-150">About Us</a>
+                <a href="services.html" class="hover:text-teal-400 transition duration-150">Services</a>
                 <a href="affiliates.html" class="hover:text-teal-400 transition duration-150">Affiliates</a>
-                <a href="contact.html" class="hover:text-teal-400 transition duration-150">Contact</a>
+                <a href="contact.html" class="text-white transition duration-150 border-b-2" style="border-color: var(--color-primary);">Contact</a>
             </nav>
 
             <!-- Mobile Menu Button (Hamburger Icon) -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Button (Hamburger Icon) -->
             <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
@@ -72,11 +83,223 @@
             <nav class="flex flex-col px-4 py-2 space-y-2 text-sm font-medium">
                 <a href="index.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
                 <a href="about.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Us</a>
+                <a href="services.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
                 <a href="affiliates.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Affiliates</a>
-                <a href="contact.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+                <a href="contact.html" class="block py-2 bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
             </nav>
         </div>
     </header>
-  </body>
+
+    <main class="pt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            
+            <!-- Main Title Section -->
+            <header class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 section-title">
+                    Get In Touch
+                </h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    We're ready to discuss your next project, provide a quote, or answer any questions you may have about our technology and building services.
+                </p>
+            </header>
+
+            <!-- Contact Grid (Info Cards & Form) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <!-- Information Cards (Left Column on Desktop) -->
+                <div class="lg:col-span-1 space-y-8">
+                    
+                    <!-- Phone Card -->
+                    <div class="info-card">
+                        <span class="text-3xl mr-4" style="color: var(--color-primary);">📞</span>
+                        <div>
+                            <p class="font-semibold text-lg">Call Us</p>
+                            <a href="tel:+2348012345678" class="text-gray-300 hover:text-teal-400 transition duration-150">+234 801 234 5678</a>
+                            <p class="text-sm text-gray-400">Mon - Sat, 8:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Email Card -->
+                    <div class="info-card">
+                        <span class="text-3xl mr-4" style="color: var(--color-primary);">📧</span>
+                        <div>
+                            <p class="font-semibold text-lg">Email Us</p>
+                            <a href="mailto:info@okochtech.com.ng" class="text-gray-300 hover:text-teal-400 transition duration-150">info@okochtech.com.ng</a>
+                            <p class="text-sm text-gray-400">We aim to respond within 24 hours.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Location Card -->
+                    <div class="info-card items-start">
+                        <span class="text-3xl mr-4 mt-1" style="color: var(--color-primary);">📍</span>
+                        <div>
+                            <p class="font-semibold text-lg">Our Office</p>
+                            <p class="text-gray-300">
+                                Suite B10, Technology Hub<br>
+                                123 Evolution Drive, Victoria Island<br>
+                                Lagos, Nigeria
+                            </p>
+                            <a href="#" target="_blank" class="text-sm font-semibold hover:text-teal-400 transition duration-150 mt-2 block" style="color: var(--color-primary);">
+                                View on Map &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Right Column on Desktop) -->
+                <div class="lg:col-span-2">
+                    <form id="contact-form" class="contact-form space-y-6">
+                        <h2 class="text-2xl font-bold mb-4 text-gray-100">Send Us a Message</h2>
+                        
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="name@example.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+234 80...">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-medium mb-2">Service of Interest</label>
+                            <select id="service" name="service" class="w-full bg-slate-800 border border-slate-600 text-gray-300 p-3 rounded-md transition duration-200">
+                                <option value="">--- Select a Service ---</option>
+                                <option value="Car Tracking">Car Tracking System</option>
+                                <option value="Networking/CCTV">Advanced Networking & Security</option>
+                                <option value="Software Dev">Software Development</option>
+                                <option value="Training">Computer Training & Skills</option>
+                                <option value="Programming">Programming & Web3 Classes</option>
+                                <option value="POP">POP Ceiling Installation</option>
+                                <option value="Interior">Interior Finishing</option>
+                                <option value="Exterior">Exterior Construction</option>
+                                <option value="Other">Other Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your needs..."></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-button" class="w-full py-3 rounded-lg font-semibold text-lg hover:bg-teal-700 transition duration-300" style="background-color: var(--color-primary); color: var(--color-bg);">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Message Box Modal (for form submission feedback) -->
+        <div id="message-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300" aria-modal="true" role="dialog">
+            <div class="bg-slate-800 p-8 rounded-xl max-w-sm w-full transform transition-all duration-300 scale-95">
+                <h3 id="modal-title" class="text-xl font-bold mb-4" style="color: var(--color-primary);">Notification</h3>
+                <p id="modal-message" class="text-gray-300 mb-6"></p>
+                <button onclick="closeModal()" class="w-full py-2 rounded-lg font-semibold" style="background-color: var(--color-primary); color: var(--color-bg);">
+                    Close
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p class="mb-4">&copy; <span id="current-year-footer"></span> Okoch Evolution Technology. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="about.html" class="hover:text-teal-400">Privacy Policy</a>
+                <span class="text-slate-700">|</span>
+                <a href="affiliates.html" class="hover:text-teal-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Utility -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year-footer').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // --- Modal/Message Box Functions ---
+        function showMessage(message, type) {
+            const modal = document.getElementById('message-modal');
+            const title = document.getElementById('modal-title');
+            const msg = document.getElementById('modal-message');
+            
+            msg.textContent = message;
+            title.textContent = type === 'success' ? 'Success' : 'Error';
+            title.style.color = type === 'success' ? 'var(--color-primary)' : '#EF4444'; 
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('message-modal');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                 modal.classList.add('hidden');
+            }, 300);
+            
+        }
+        
+        // --- Form Submission Handler (Client-side validation & simulated response) ---
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitButton = document.getElementById('submit-button');
+            
+            // Simple client-side validation check
+            if (!this.checkValidity()) {
+                showMessage("Please fill in all required fields (Name, Email, Message).", 'error');
+                return;
+            }
+
+            // Simulate form submission process
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                // In a real application, you would send data to a backend endpoint here.
+                // Example: fetch('/submit', { method: 'POST', body: new FormData(this) })
+                
+                // On successful simulation:
+                showMessage('Thank you! Your message has been sent successfully. We will be in touch shortly.', 'success');
+                this.reset(); // Clear the form
+                
+                // Reset button state
+                submitButton.textContent = 'Submit Inquiry';
+                submitButton.disabled = false;
+
+            }, 2000); // Wait 2 seconds for simulation
+        });
+
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').includes('.html')) return; 
+
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
-  
