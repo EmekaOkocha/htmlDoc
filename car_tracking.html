@@ -2,38 +2,224 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Car Tracking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okoch Evolution Technology - Car Tracking System</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-        h1 { color: #2a6496; border-bottom: 2px solid #2a6496; padding-bottom: 5px; }
-        h2 { color: #333; margin-top: 20px; }
-        ul { list-style-type: disc; margin-left: 20px; }
-        .note { color: #d9534f; font-weight: bold; }
+        /* Custom styles and professional color scheme */
+        :root {
+            --color-bg: #0F172A; /* Slate 900 */
+            --color-primary: #00A388; /* Deep Teal/Cyan */
+            --color-accent: #334155; /* Slate 700 */
+            --color-text: #E2E8F0; /* Slate 200 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            scroll-behavior: smooth;
+        }
+        .header-sticky {
+            backdrop-filter: blur(10px);
+            background-color: rgba(15, 23, 42, 0.9); /* Slightly transparent background for sticky effect */
+        }
+        .section-title {
+            color: var(--color-primary);
+        }
+        .affiliate-card {
+             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+             transition: transform 0.3s ease;
+        }
+        .affiliate-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+        }
+        /* Custom styling for the quote box to match the dark theme */
+        .quote-box {
+            background-color: var(--color-accent);
+            border: 2px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+        }
     </style>
 </head>
-<body>
-    <h1>🛰️ Car Tracking System</h1>
-    
-    <h2>Key Features</h2>
-    <p>Our state-of-the-art Car Tracking System offers crucial security and monitoring features:</p>
-    <ul>
-        <li><strong>Real-Time Tracking:</strong> Monitor your vehicle's exact location, movement, and status 24/7.</li>
-        <li><strong>Engine Cut-Off (Immobilization):</strong> The ability to remotely turn off the engine via the mobile application in case of theft.</li>
-        <li><strong>Mobile Application Access:</strong> Manage and monitor your vehicle directly from your smartphone.</li>
-    </ul>
+<body class="antialiased">
+    <header id="header" class="fixed top-0 left-0 w-full z-50 header-sticky">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-bold tracking-tight" style="color: var(--color-primary);">Okoch Evolution Technology</a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-teal-400 transition duration-150">Home</a>
+                <a href="about.html" class="hover:text-teal-400 transition duration-150">About Us</a>
+                <a href="affiliates.html" class="hover:text-teal-400 transition duration-150">Affiliates</a>
+                <a href="contact.html" class="hover:text-teal-400 transition duration-150">Contact</a>
+            </nav>
 
-    <h2>Fees and Subscription</h2>
-    <p>The cost structure involves an **initial installation fee** and a **recurring service subscription** fee:</p>
-    <ul>
-        <li>The **Service Subscription Fee** (paid monthly or yearly) is required to keep the tracking service and mobile app active and running.</li>
-        <li>The specific cost for the installation and the subscription rates will be provided in your official quotation (within 1 hour of request).</li>
-    </ul>
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-900 border-t border-slate-700/50">
+            <nav class="flex flex-col px-4 py-2 space-y-2 text-sm font-medium">
+                <a href="index.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+                <a href="about.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Us</a>
+                <a href="affiliates.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Affiliates</a>
+                <a href="contact.html" class="block py-2 hover:bg-slate-700 rounded-md transition duration-150" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-    <h2>Warranty</h2>
-    <p>We provide a **3-month warranty** covering the tracking device and the installation workmanship, effective from the date of installation.</p>
+    <main class="pt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            
+            <!-- Main Title Section -->
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 section-title">
+                    🛰️ Car Tracking System
+                </h1>
+                <p class="text-xl text-gray-400">
+                    State-of-the-art vehicle security, real-time monitoring, and remote immobilization.
+                </p>
+            </header>
 
-    <div class="note">
-        <p>Information required for quote: Vehicle make/model and desired installation location.</p>
-    </div>
+            <!-- Key Features Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 section-title">Key Features</h2>
+                <p class="text-lg text-gray-300 mb-6">
+                    Our Car Tracking System offers crucial security and monitoring features for peace of mind:
+                </p>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-300 pl-4">
+                    <li>
+                        <strong class="text-primary">Real-Time Tracking:</strong> Monitor your vehicle's exact location, movement, and status 24/7 via GPS technology. 
+                        [Image of a car location being displayed on a mobile GPS map interface]
+                    </li>
+                    <li>
+                        <strong class="text-primary">Engine Cut-Off (Immobilization):</strong> The crucial ability to remotely turn off the engine via the mobile application in case of theft or unauthorized use.
+                    </li>
+                    <li>
+                        <strong class="text-primary">Mobile Application Access:</strong> Manage and monitor your vehicle directly from your smartphone with user-friendly controls.
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Fees and Subscription Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 section-title">Fees and Subscription</h2>
+                <p class="text-lg text-gray-300">
+                    The cost structure involves an **initial installation fee** and a **recurring service subscription** fee.
+                </p>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-300 pl-4 mt-4">
+                    <li>The **Service Subscription Fee** (paid monthly or yearly) is required to keep the tracking service and mobile app active and running.</li>
+                    <li>The specific cost for the installation and the subscription rates will be provided in your official quotation (within 1 hour of request).</li>
+                </ul>
+            </section>
+
+            <!-- Warranty Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-4 section-title">Warranty</h2>
+                <p class="text-lg text-gray-300">
+                    We provide a **3-month warranty** covering the tracking device hardware and the installation workmanship, effective from the date of installation.
+                </p>
+            </section>
+
+            <!-- Required Information for Quote (CTA Box) -->
+            <div class="quote-box">
+                <h3 class="text-2xl font-bold mb-4" style="color: var(--color-primary);">
+                    ➡️ Information Required for Quote (1-Hour Estimate)
+                </h3>
+                <p class="text-gray-300 mb-6">
+                    To receive a fast and accurate quotation for installation and subscription fees, please provide the following details:
+                </p>
+                <ul class="list-disc list-inside space-y-3 text-gray-200 pl-4 mb-4">
+                    <li><strong class="text-primary">Vehicle Make/Model</strong> (e.g., Toyota Camry 2020).</li>
+                    <li><strong class="text-primary">Desired Installation Location</strong> (e.g., Lagos, Abuja).</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- Message Box Modal (Included for completeness/utility) -->
+        <div id="message-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300" aria-modal="true" role="dialog">
+            <div class="bg-slate-800 p-8 rounded-xl max-w-sm w-full transform transition-all duration-300 scale-95">
+                <h3 id="modal-title" class="text-xl font-bold mb-4" style="color: var(--color-primary);">Notification</h3>
+                <p id="modal-message" class="text-gray-300 mb-6"></p>
+                <button onclick="closeModal()" class="w-full py-2 rounded-lg font-semibold" style="background-color: var(--color-primary); color: var(--color-bg);">
+                    Close
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p class="mb-4">&copy; <span id="current-year"></span> Okoch Evolution Technology. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="about.html" class="hover:text-teal-400">Privacy Policy</a>
+                <span class="text-slate-700">|</span>
+                <a href="affiliates.html" class="hover:text-teal-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Utility -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Modal/Message Box Functions (for consistency)
+        function showMessage(message, type) {
+            const modal = document.getElementById('message-modal');
+            const title = document.getElementById('modal-title');
+            const msg = document.getElementById('modal-message');
+            
+            msg.textContent = message;
+            title.textContent = type === 'success' ? 'Success' : 'Error';
+            title.style.color = type === 'success' ? 'var(--color-primary)' : '#EF4444'; 
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('message-modal');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                 modal.classList.add('hidden');
+            }, 300);
+            
+        }
+
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').includes('.html')) return; 
+
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
