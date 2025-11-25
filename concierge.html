@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Okoch Evolution Technology - Evolving with the time</title>
+    <title>Okoch Evolution Technology - Concierge Services</title>
     <!-- Load Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Use Inter font -->
@@ -37,6 +37,14 @@
             transform: translateY(-5px);
             border-color: var(--color-primary);
         }
+        /* Custom styling for the quote box to match the dark theme */
+        .quote-box {
+            background-color: var(--color-accent);
+            border: 2px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -58,12 +66,6 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-
-        <!-- Mobile Menu Button (Hamburger Icon) -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
         
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="md:hidden hidden bg-slate-900 border-t border-slate-700/50">
@@ -75,34 +77,139 @@
             </nav>
         </div>
     </header>
-    
-        <!-- 1. Home Section (Hero) -->
-         <h1>✈️ Concierge Services: Travel Reservations & Tours</h1>
-    
-    <h2>Travel Reservation Scope</h2>
-    <p>We specialize in securing **local and international flight reservations only**. We do not currently handle reservations for rail, bus, or other ground transport methods.</p>
 
-       
-    
-    <h2>Specialized Tour Offerings</h2>
-    <p>We offer highly specialized tour packages tailored for:</p>
-    <ul>
-        <li><strong>Business Travel:</strong> Streamlined logistics and accommodation support.</li>
-        <li><strong>Major Sporting Events:</strong> Packages for international events like the World Cup, Nations Cup, and similar high-profile sports competitions.</li>
-    </ul>
+    <main class="pt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            
+            <!-- Main Title Section -->
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 section-title">
+                    ✈️ Concierge Services: Travel Reservations & Tours
+                </h1>
+                <p class="text-xl text-gray-400">
+                    Bespoke travel planning for flights and exclusive, specialized tours.
+                </p>
+            </header>
 
-    <h2>Pricing and Quotation</h2>
-    <p>Pricing for specialized tours (Business, Events) is **variable** and depends on the event, duration, location, and included services. We **do not** have a flat rate.</p>
+            <!-- Travel Reservation Scope Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 section-title">Travel Reservation Scope</h2>
+                <p class="text-lg text-gray-300">
+                    We specialize in securing **local and international flight reservations only**. We do not currently handle reservations for rail, bus, or other ground transport methods. [Image of an international airport departures board]
+                </p>
+            </section>
+            
+            <!-- Specialized Tour Offerings Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 section-title">Specialized Tour Offerings</h2>
+                <p class="text-lg text-gray-300 mb-6">
+                    We offer highly specialized tour packages tailored for:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-lg text-gray-300 pl-4">
+                    <li><strong>Business Travel:</strong> Streamlined logistics and accommodation support. [Image of a corporate jet interior]</li>
+                    <li><strong>Major Sporting Events:</strong> Packages for international events like the World Cup, Nations Cup, and similar high-profile sports competitions. </li>
+                </ul>
+            </section>
 
-    <div class="quote-box">
-        <h3>➡️ Information Required for Flight Reservations (1-Hour Quote)</h3>
-        <p>To initiate a flight booking and receive a quote within 1 hour, please provide the following mandatory details:</p>
-        <ul>
-            <li><strong>Full Name(s)</strong> of all travelers (as they appear on the passport/ID).</li>
-            <li><strong>Date of Travel</strong> (Departure and Return).</li>
-            <li><strong>Number of People</strong> traveling.</li>
-            <li><strong>Class of Plane</strong> preference (Economy, Business Class, or First Class).</li>
-        </ul>
-    </div>
+            <!-- Pricing and Quotation Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-4 section-title">Pricing and Quotation</h2>
+                <p class="text-lg text-gray-300">
+                    Pricing for specialized tours (Business, Events) is **variable** and depends on the event, duration, location, and included services. We **do not** have a flat rate.
+                </p>
+            </section>
+
+            <!-- Required Information for Quote (CTA Box) -->
+            <div class="quote-box">
+                <h3 class="text-2xl font-bold mb-4" style="color: var(--color-primary);">
+                    ➡️ Information Required for Flight Reservations (1-Hour Quote)
+                </h3>
+                <p class="text-gray-300 mb-6">
+                    To initiate a flight booking and receive a quote within 1 hour, please provide the following mandatory details:
+                </p>
+                <ul class="list-disc list-inside space-y-3 text-gray-200 pl-4">
+                    <li><strong class="text-primary">Full Name(s)</strong> of all travelers (as they appear on the passport/ID).</li>
+                    <li><strong class="text-primary">Date of Travel</strong> (Departure and Return).</li>
+                    <li><strong class="text-primary">Number of People</strong> traveling.</li>
+                    <li><strong class="text-primary">Class of Plane</strong> preference (Economy, Business Class, or First Class).</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- Message Box Modal (Included for completeness/utility) -->
+        <div id="message-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300" aria-modal="true" role="dialog">
+            <div class="bg-slate-800 p-8 rounded-xl max-w-sm w-full transform transition-all duration-300 scale-95">
+                <h3 id="modal-title" class="text-xl font-bold mb-4" style="color: var(--color-primary);">Notification</h3>
+                <p id="modal-message" class="text-gray-300 mb-6"></p>
+                <button onclick="closeModal()" class="w-full py-2 rounded-lg font-semibold" style="background-color: var(--color-primary); color: var(--color-bg);">
+                    Close
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p class="mb-4">&copy; <span id="current-year"></span> Okoch Evolution Technology. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="about.html" class="hover:text-teal-400">Privacy Policy</a>
+                <span class="text-slate-700">|</span>
+                <a href="affiliates.html" class="hover:text-teal-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Utility -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Modal/Message Box Functions (for consistency)
+        function showMessage(message, type) {
+            const modal = document.getElementById('message-modal');
+            const title = document.getElementById('modal-title');
+            const msg = document.getElementById('modal-message');
+            
+            msg.textContent = message;
+            title.textContent = type === 'success' ? 'Success' : 'Error';
+            title.style.color = type === 'success' ? 'var(--color-primary)' : '#EF4444'; 
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('message-modal');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                 modal.classList.add('hidden');
+            }, 300);
+            
+        }
+
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').includes('.html')) return; 
+
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
